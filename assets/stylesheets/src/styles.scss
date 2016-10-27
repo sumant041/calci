@@ -1,34 +1,92 @@
 $key_height: 16vmin;
-body{
+
+$result_bgcolor: #fff;
+$prev_bgcolor: #eee;
+$num_key_bgcolor: #444;
+$num_key_color: #fff;
+$ope_key_bgcolor: #666;
+$ope_key_color: #fff;
+
+$result_font_weight: 100;
+$num_key_font_weight: 200;
+$ope_key_font_weight: 200;
+
+
+body {
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
 }
 
-#calculator{
+#calculator {
   width: 100vmin;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
-#result {
-   background-color: purple;
-   height: 1.3*$key_height;
+
+  #keys, #operators {
+    ::selection, ::-moz-selection {
+      background-color: transparent;
+      color: inherit;
+    }
   }
+
+  #result {
+    background-color: $result_bgcolor;
+    height: 1.3*$key_height;
+    text-align: right;
+    font-size: 14vmin;
+    line-height: 20.8vmin;
+    font-weight: $result_font_weight
+  }
+
   #preview {
-    background-color: yellow;
+    background-color:  $prev_bgcolor;
     height: 0.7*$key_height;
+    font-size: 14vmin;
+    text-align: right;
+    font-size: 6vmin;
+    line-height: 11.2vmin;
+    font-weight: 100;
+    padding-right: 2vmin;
   }
 
   #keys {
-    .key{
-      background-color: blue;
+
+
+    .key {
+      background-color: $num_key_bgcolor;
+      color: $num_key_color;
       height: $key_height;
+      font-size: 8vmin;
+      text-align: center;
+      font-weight: $num_key_font_weight;
+      line-height: $key_height;
+
+
+      &:hover{
+        background-color: darken($num_key_bgcolor,5%);
+      }
+
+      &:active{
+        background-color: darken($num_key_bgcolor,10%);
+        font-weight: 300;
+
+      }
     }
   }
+
   #operators {
-    .operator{
-      background-color: orange;
-      height: 0.8*$key_height;
+    .operator {
+      background-color: $ope_key_bgcolor;
+      color: $ope_key_color;
+      height: 0.8 * $key_height;
       margin: 0 -15px;
+      font-size: 6vmin;
+      font-weight: $ope_key_font_weight;
+      text-align:center;
+      line-height:0.8*$key_height;
     }
   }
 }

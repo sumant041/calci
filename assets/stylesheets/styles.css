@@ -1,5 +1,6 @@
 body {
-  height: 100vh; }
+  height: 100vh;
+  font-family: 'Roboto', sans-serif; }
 
 #calculator {
   width: 100vmin;
@@ -7,18 +8,46 @@ body {
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto; }
+  #calculator #keys ::selection, #calculator #keys ::-moz-selection, #calculator #operators ::selection, #calculator #operators ::-moz-selection {
+    background-color: transparent;
+    color: inherit; }
   #calculator #result {
-    background-color: purple;
-    height: 20.8vmin; }
+    background-color: #fff;
+    height: 20.8vmin;
+    text-align: right;
+    font-size: 14vmin;
+    line-height: 20.8vmin;
+    font-weight: 100; }
   #calculator #preview {
-    background-color: yellow;
-    height: 11.2vmin; }
+    background-color: #eee;
+    height: 11.2vmin;
+    font-size: 14vmin;
+    text-align: right;
+    font-size: 6vmin;
+    line-height: 11.2vmin;
+    font-weight: 100;
+    padding-right: 2vmin; }
   #calculator #keys .key {
-    background-color: blue;
-    height: 16vmin; }
+    background-color: #444;
+    color: #fff;
+    height: 16vmin;
+    font-size: 8vmin;
+    text-align: center;
+    font-weight: 200;
+    line-height: 16vmin; }
+    #calculator #keys .key:hover {
+      background-color: #373737; }
+    #calculator #keys .key:active {
+      background-color: #2b2b2b;
+      font-weight: 300; }
   #calculator #operators .operator {
-    background-color: orange;
+    background-color: #666;
+    color: #fff;
     height: 12.8vmin;
-    margin: 0 -15px; }
+    margin: 0 -15px;
+    font-size: 6vmin;
+    font-weight: 200;
+    text-align: center;
+    line-height: 12.8vmin; }
 
 /*# sourceMappingURL=styles.css.map */
